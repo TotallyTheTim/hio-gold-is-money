@@ -217,6 +217,52 @@ h5 {
   padding: 0.25em;
 }
 
+.calc {
+  grid-column: span 2;
+  padding: 24px;
+  margin-top: 124px;
+}
+
+.price-group {
+  display: flex;
+  margin-top: 12px;
+  width: 100%;
+  align-items: center;
+}
+
+.price-group span {
+  border-bottom: solid 1px #e7ac72;
+  margin-left: 12px;
+  padding: 12px;
+  flex: 1;
+}
+
+.price-group img,
+.corner {
+  padding: 4px;
+  width: 32px;
+  height: 32px;
+  border: solid 1px #e7ac72;
+}
+
+.corner {
+  border-top: solid 1px transparent;
+  border-left: solid 1px transparent;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to bottom right, transparent 50%, #e7ac72 50%, #e7ad7246 calc(50% + 3px));
+}
+
+input {
+  width: 100%;
+  flex: 1;
+  background-color: #e7ad720e;
+  color: #e7ac72;
+  border: none;
+  border-bottom: solid 1px #e7ac72;
+  padding: 12px;
+  margin-left: 12px;
+}
+
 @media only screen and (max-width: 1440px) {
   .block {
     grid-template-columns: 1fr;
@@ -227,7 +273,10 @@ h5 {
     margin: unset;
     margin-bottom: 124px;
   }
-  .text, .header {
+
+  .text,
+  .header,
+  .calc {
     grid-column: span 1;
   }
 
@@ -238,17 +287,25 @@ h5 {
   }
 }
 
-
 @media only screen and (max-width: 720px) {
-  .text-cash{
+  .text-cash {
     grid-template-columns: 1fr;
   }
-  ul,ol{
+  ul,
+  ol {
     flex-direction: column;
     text-align: left;
     width: 100%;
   }
-  li{
+  li {
     margin-bottom: 2px;
+  }
+
+  .calc {
+    padding: 24px 0;
+  }
+
+  mh{
+    display: none;
   }
 }
